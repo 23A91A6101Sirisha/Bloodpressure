@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Pressure Prediction Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Pressure Prediction</h1>
+        <form action="/predict" method="post">
+            <!-- All your form fields here (same as before) -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="Gender" required>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </div>
+            <!-- Age -->
+            <div class="form-group">
+                <label>Age:</label>
+                <input type="number" name="Age" min="1" max="120" required>
+            </div>
+            
+            <!-- History -->
+            <div class="form-group">
+                <label>History (0=No, 1=Yes):</label>
+                <input type="number" name="History" min="0" max="1" required>
+            </div>
+            
+            <!-- Patient -->
+            <div class="form-group">
+                <label>Patient (0=No, 1=Yes):</label>
+                <input type="number" name="Patient" min="0" max="1" required>
+            </div>
+            
+            <!-- TakeMedication -->
+            <div class="form-group">
+                <label>Take Medication (0=No, 1=Yes):</label>
+                <input type="number" name="TakeMedication" min="0" max="1" required>
+            </div>
+            
+            <!-- Severity -->
+            <div class="form-group">
+                <label>Severity (0-10 scale):</label>
+                <input type="number" name="Severity" min="0" max="10" required>
+            </div>
+            
+            <!-- BreathShortness -->
+            <div class="form-group">
+                <label>Breath Shortness (0=No, 1=Yes):</label>
+                <input type="number" name="BreathShortness" min="0" max="1" required>
+            </div>
+            
+            <!-- VisualChanges -->
+            <div class="form-group">
+                <label>Visual Changes (0=No, 1=Yes):</label>
+                <input type="number" name="VisualChanges" min="0" max="1" required>
+            </div>
+            
+            <!-- NoseBleeding -->
+            <div class="form-group">
+                <label>Nose Bleeding (0=No, 1=Yes):</label>
+                <input type="number" name="NoseBleeding" min="0" max="1" required>
+            </div>
+            
+            <!-- Whendiagnoused -->
+            <div class="form-group">
+                <label>When Diagnosed (Months ago):</label>
+                <input type="number" name="Whendiagnoused" min="0" required>
+            </div>
+            
+            <!-- Systolic -->
+            <div class="form-group">
+                <label>Systolic Pressure:</label>
+                <input type="number" name="Systolic" min="50" max="300" required>
+            </div>
+            
+            <!-- Diastolic -->
+            <div class="form-group">
+                <label>Diastolic Pressure:</label>
+                <input type="number" name="Diastolic" min="30" max="200" required>
+            </div>
+            
+            <!-- ControlledDiet -->
+            <div class="form-group">
+                <label>Controlled Diet (0=No, 1=Yes):</label>
+                <input type="number" name="ControlledDiet" min="0" max="1" required>
+            </div>
+            <!-- Include all other fields exactly as in your original predict_form.html -->
+            
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
